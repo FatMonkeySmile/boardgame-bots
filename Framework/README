@@ -1,0 +1,11 @@
+Copyright (C) 2011 Boardgame Bots (http://code.google.com/p/boardgame-bots)
+ 
+Boardgame Bots is a framework that allows people to write board game playing 
+bots in Java and watch them compete. Games supported so far are Risk, Othello, 
+Chess, Pente, Hex, Twixt, Lines of Action and Xiangqi.
+It is released under version 3 of the GPL; see "COPYING" for the license text.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
