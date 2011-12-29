@@ -103,12 +103,6 @@ public class Misc
 	
 	public static ArrayList getBots(GameBase base, String[] args, int num, String random) throws Exception
 	{
-		return getBots(base, args, num, num, random);
-	}
-	
-	public static ArrayList getBots(GameBase base, String[] args, int num, int fillNum, String random) throws Exception
-	{
-		ArrayList rankingsStrings = null;
 		if(isTournament(args))
 		{
 			String dir = args[1];
@@ -164,7 +158,7 @@ public class Misc
 					allBots.add(children[i]);
 				}
 			}
-			for(int i=0; i < fillNum && allBots.size() > 0; i++)
+			for(int i=0; i < num && allBots.size() > 0; i++)
 			{
 				int r = rand.nextInt(allBots.size());
 				bots.add(((File) allBots.get(r)).getAbsolutePath());
@@ -272,29 +266,6 @@ public class Misc
 					tournCache.put(name, botInfo);
 				}
 				bots.add(botInfo);				
-			}
-		}
-		
-		if(rankingsStrings != null)
-		{
-			for(int i=0; i < rankingsStrings.size(); i++)
-			{
-				String s = (String) rankingsStrings.get(i);
-				StringTokenizer st = new StringTokenizer(s, "/");
-				String rankingStr = st.nextToken();
-				String rankingDenomStr = st.nextToken();
-				rankingStr = rankingStr.trim();
-				rankingDenomStr = rankingDenomStr.trim();
-				
-				if(!rankingStr.equals("-"))
-				{
-					((BotInfo) bots.get(i)).rank = Integer.parseInt(rankingStr);
-				}
-				
-				if(!rankingDenomStr.equals("-"))
-				{
-					((BotInfo) bots.get(i)).rankDenom = Integer.parseInt(rankingDenomStr);
-				}
 			}
 		}
 		
