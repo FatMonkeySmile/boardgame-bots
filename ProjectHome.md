@@ -1,0 +1,1 @@
+Write board game playing bots in Java and watch them compete. Games supported so far are Risk, Othello, Chess, Pente, Hex, Twixt, Lines of Action and Xiangqi.
